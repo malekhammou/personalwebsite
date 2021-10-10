@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import "./App.css";
 import Malek from "../src/images/nobg.png";
 import Github from "../src/icons/github.png";
+import Mail from "../src/icons/mail.png"
 import Linkedin from "../src/icons/linkedin.png";
 import Scholar from "../src/icons/scholar.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -32,6 +33,17 @@ const App=()=> {
        Malek is an <span className="highlight">engineering student</span> at the <span className="highlight">National School of Computer Science</span> in Tunisia.
       </p>
       <div style={{ display: "flex" }}>
+      <a  href="mailto:malek.hammou@ensi-uma.tn" target="_blank">
+          <img
+            style={{
+              height: "3em",
+              width: "3m",
+              borderRadius: "50%",
+              margin: "0.5em",
+            }}
+            src={Mail}
+          />
+        </a>
         <a href="https://github.com/malekhammou" target="_blank">
           <img
             style={{
