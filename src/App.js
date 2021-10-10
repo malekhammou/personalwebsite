@@ -8,7 +8,7 @@ import Scholar from "../src/icons/scholar.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EducationSection from "./components/educationSection";
 import WorkExperienceSection from "./components/workExperienceSection";
-
+import CommunityLifeSection from "./components/communityLifeSection";
 
 
 const App=()=> {
@@ -17,6 +17,7 @@ const App=()=> {
   })
   const [toggleEducation,setToggleEducation]=useState(false);
   const [toggleWorkExperience,setToggleWorkExperience]=useState(false);
+  const [toggleCommunityLife,setToggleCommunityLife]=useState(false);
 
  
   return (
@@ -92,6 +93,10 @@ const App=()=> {
         onTitleClick={()=>setToggleWorkExperience(!toggleWorkExperience)}
         toggleContent={toggleWorkExperience}
         />
+      <CommunityLifeSection
+        titleClassName="main-section-title"
+        onTitleClick={()=>setToggleCommunityLife(!toggleCommunityLife)}
+        toggleContent={toggleCommunityLife}/>
           </div>
           <footer className="footer"> Created by Malek Hammou</footer>
     </div>
