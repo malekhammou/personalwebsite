@@ -32,6 +32,7 @@ const App=()=> {
       </div>
       <p className="global-intro">
        Malek is an <span className="highlight">engineering student</span> at the <span className="highlight">National School of Computer Science</span> in Tunisia.
+        He is Curious about computer vision applications in medical multimedia.
       </p>
       <div style={{ display: "flex" }}>
       <a  href="mailto:malek.hammou@ensi-uma.tn" target="_blank">

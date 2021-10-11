@@ -11,7 +11,7 @@ const CommunityLifeSection = ({titleClassName,onTitleClick,toggleContent}) => {
         <div className={toggleContent?" show ":"hide"}   >
             <div className="carousel-section">
             <span> OC member at TEDxYouth@SadikiCollege. May 2016</span>
-        <Carousel width="100%" showArrows={true}  showArrows={true} >
+        <Carousel width="100%"  showArrows={true} >
      
        <div>
                     <img src={Me} />
