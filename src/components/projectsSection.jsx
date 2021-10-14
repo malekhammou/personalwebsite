@@ -10,7 +10,7 @@ const ProjectsSection = ({ titleClassName, onTitleClick, toggleContent }) => {
         <div className="section">
           <div className="section-title">
             <img className="project-logo" src={Doctonise} />
-            <span className="bold ">Doctonise</span>
+            <span className="bold "></span>
           </div>
           <div className="section-description"></div>
         </div>
