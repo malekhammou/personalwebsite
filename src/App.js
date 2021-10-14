@@ -1,41 +1,39 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Malek from "../src/images/nobg.png";
 import Github from "../src/icons/github.png";
-import Mail from "../src/icons/mail.png"
+import Mail from "../src/icons/mail.png";
 import Linkedin from "../src/icons/linkedin.png";
 import Scholar from "../src/icons/scholar.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import EducationSection from "./components/educationSection";
 import WorkExperienceSection from "./components/workExperienceSection";
 import CommunityLifeSection from "./components/communityLifeSection";
+import ProjectsSection from "./components/projectsSection";
 
+const App = () => {
+  useEffect(() => {});
+  const [toggleEducation, setToggleEducation] = useState(false);
+  const [toggleWorkExperience, setToggleWorkExperience] = useState(false);
+  const [toggleCommunityLife, setToggleCommunityLife] = useState(false);
+  const [toggleProjects, setToggleProjects] = useState(false);
 
-const App=()=> {
-  useEffect(()=>{
-
-  })
-  const [toggleEducation,setToggleEducation]=useState(false);
-  const [toggleWorkExperience,setToggleWorkExperience]=useState(false);
-  const [toggleCommunityLife,setToggleCommunityLife]=useState(false);
-
- 
   return (
     <div className="App">
       <div className="photoAndFullname">
         {" "}
-        <img className="profile-image"
-        
-          src={Malek}
-        />
+        <img className="profile-image" src={Malek} />
         <span className="fullname">MALEK HAMMOU</span>
       </div>
       <p className="global-intro">
-       Malek is an <span className="highlight">engineering student</span> at the <span className="highlight">National School of Computer Science</span> in Tunisia.
-        He is Curious about computer vision applications in medical multimedia.
+        Malek is an <span className="highlight">engineering student</span> at
+        the{" "}
+        <span className="highlight">National School of Computer Science</span>{" "}
+        in Tunisia. He is Curious about computer vision applications in medical
+        multimedia.
       </p>
       <div style={{ display: "flex" }}>
-      <a  href="mailto:malek.hammou@ensi-uma.tn" target="_blank">
+        <a href="mailto:malek.hammou@ensi-uma.tn" target="_blank">
           <img
             style={{
               height: "3em",
@@ -85,23 +83,29 @@ const App=()=> {
 
       <div className="main-wrapper">
         <EducationSection
-        titleClassName="main-section-title"
-        onTitleClick={()=>setToggleEducation(!toggleEducation)}
-        toggleContent={toggleEducation}
+          titleClassName="main-section-title"
+          onTitleClick={() => setToggleEducation(!toggleEducation)}
+          toggleContent={toggleEducation}
         />
         <WorkExperienceSection
-        titleClassName="main-section-title"
-        onTitleClick={()=>setToggleWorkExperience(!toggleWorkExperience)}
-        toggleContent={toggleWorkExperience}
+          titleClassName="main-section-title"
+          onTitleClick={() => setToggleWorkExperience(!toggleWorkExperience)}
+          toggleContent={toggleWorkExperience}
         />
-      <CommunityLifeSection
-        titleClassName="main-section-title"
-        onTitleClick={()=>setToggleCommunityLife(!toggleCommunityLife)}
-        toggleContent={toggleCommunityLife}/>
-          </div>
-          <footer className="footer"> Created by Malek Hammou</footer>
+        <CommunityLifeSection
+          titleClassName="main-section-title"
+          onTitleClick={() => setToggleCommunityLife(!toggleCommunityLife)}
+          toggleContent={toggleCommunityLife}
+        />
+        <ProjectsSection
+          titleClassName="main-section-title"
+          onTitleClick={() => setToggleProjects(!toggleProjects)}
+          toggleContent={toggleProjects}
+        />
+      </div>
+      <footer className="footer"> Created by Malek Hammou</footer>
     </div>
   );
-}
+};
 
 export default App;
