@@ -9,7 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import EducationSection from "./components/educationSection";
 import WorkExperienceSection from "./components/workExperienceSection";
 import CommunityLifeSection from "./components/communityLifeSection";
-import ProjectsSection from "./components/projectsSection";
 
 const App = () => {
   useEffect(() => {});
@@ -96,11 +95,6 @@ const App = () => {
           titleClassName="main-section-title"
           onTitleClick={() => setToggleCommunityLife(!toggleCommunityLife)}
           toggleContent={toggleCommunityLife}
-        />
-        <ProjectsSection
-          titleClassName="main-section-title"
-          onTitleClick={() => setToggleProjects(!toggleProjects)}
-          toggleContent={toggleProjects}
         />
       </div>
       <footer className="footer"> Created by Malek Hammou</footer>
